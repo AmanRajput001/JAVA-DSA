@@ -1,3 +1,5 @@
+//DAY-2 Notes 
+
 package Notes_2_Loops_and_Conditionals;
 
 /*
