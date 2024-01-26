@@ -1,3 +1,5 @@
+//DAY-1 Notes
+
 //---For compiling any java program we need to do:- javac program_name.java  (converts to byte code)
 //--to run ay java program byte code we need to do:- java program_name  (run byte code where main method present)
 
