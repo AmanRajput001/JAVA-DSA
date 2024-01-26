@@ -17,5 +17,5 @@ This repository is a treasure trove of knowledge, featuring:
 - Detailed notes providing insightful summaries of key concepts in data structures and algorithms.
 - A curated collection of coding problems designed to reinforce your understanding of the course material.
 
-Feel free to explore and utilize the resources as you embark on your journey to master DSA and ace those FAANG interviews!
+Feel free to explore and utilize the resources.
 
