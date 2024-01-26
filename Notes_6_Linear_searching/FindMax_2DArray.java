@@ -1,3 +1,5 @@
+//DAY-6 Notes
+
 package Notes_6_Linear_searching;
 
 public class FindMax_2DArray {
