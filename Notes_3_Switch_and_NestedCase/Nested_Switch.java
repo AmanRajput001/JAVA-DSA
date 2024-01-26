@@ -1,3 +1,5 @@
+//DAY-3 Notes 
+
 package Notes_3_Switch_and_NestedCase;
 
 import java.util.Scanner;
