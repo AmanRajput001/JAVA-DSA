@@ -1,0 +1,115 @@
+/*
+    Binary Search:-
+        -> used for sorted array
+
+        array1 = [ 2, 4, 9, 10,12, 14, 18, 19] // ascending order
+
+        array2 = [ 19, 12, 6, 5, 3, 2, -8, -16] // desending order
+
+        max_search in linear serach => N => no. od elements
+
+        
+        max_search in binary serach => 
+
+            arr = [2, 4, 6, 9, 11, 12, 14, 20, 36, 48]
+
+            target = 36
+
+            --> take middle element
+            --> its an ascending order sorted array
+                --> since its sorted array then all element on left hand side of middle element is lesser than it
+                --> since its sorted array then all element on right hand side of middle element is more than it
+            --> if middle element is equal to target than i found my element.
+
+            ---------------------------------------------------------------------------------------------------------------
+            while(true){
+                start = 0;
+                end = 9;
+                middle =  (start + end) / 2 = 4
+                middle_element = arr[4] => 11
+
+                if(target < middle_element){
+                    end = middle;
+                }else{
+                    start = middle;
+                }
+
+                if(target == middle_element){
+                    // founded element
+                    break;
+                }
+                else if(start > end){
+                    break;
+                }
+            }
+
+            start = 0
+            end = 9
+            middle = (0 + 9)/2 => 4
+            middle_element = arr[4] => 11
+            ________________________________
+
+            start = 4
+            end = 9
+            middle = (4 + 9)/2 => 6
+            middle_element = arr[6] => 14
+            ________________________________
+            
+            start = 6
+            end = 9
+            middle = (6 + 9)/2 => 7
+            middle_element = arr[7] => 20
+            ________________________________
+            
+            start = 7
+            end = 9
+            middle = (7 + 9)/2 => 8
+            middle_element = arr[8] => 36
+
+            target found !!
+
+        => Time complexity:-
+
+            Best case :- O(1) (first middle element is target element)
+
+            Why binary search?
+                --> find the max number of comparisons in worst case.
+
+                        1st level:- 
+                        lets say array:- array.length = N => (N/(2^0))
+                        
+                        2nd level:- 
+                                    then if element is greater or less than middle element
+                                        then array.length = N/2 => (N/(2^1))(reduce to half where we search)
+                        
+                        3rd level:- 
+                                    then if element is greater or less than middle element
+                                         then array.length = (N/2)/2 => N/4 => (N/(2^2))(reduce to half where we search)
+                        
+                        4th level:- 
+                                    then if element is greater or less than middle element
+                                         then array.length = (N/4)/2 => N/8 => (N/(2^3))(reduce to half where we search)
+                        .
+                        .
+                        .                        
+                        Kth level:-
+                                    then at end only one element left
+                                         then array.length = N/2 => (N/(2^k))(reduce to half where we search)
+
+                        ::- (N/ (2^k)) = 1, k = total no. of comparison = ?
+                                              => K = log base 2 (N) 
+               
+                ::- Total no. of comparisions in the worst case  = log(N)  (we can ignore constant in space and time complexity).
+                    Time Complexity in worst case:- O(log(N))
+                    
+                Search in a 1,00,000:- 
+                __________________________________
+                Linear search   | Binary Search 
+                                |
+                 1 million      |  20 comparisions
+                                |
+                                |
+                             
+
+
+            */
