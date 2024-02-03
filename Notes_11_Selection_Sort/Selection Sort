@@ -1,0 +1,41 @@
+Selection Sort:- 
+
+    4, 5, 1, 2, 3
+
+select max or min element put at correct index.
+
+            4, 5, 1, 2, 3
+max = 5:-   4, 3, 1, 2, 5     (n-1) comparisons => 5 - 1 = 4
+max = 4:-   2, 3, 1, 4, 5     (n-2) comparisons => 3
+max = 3:-   2, 1, 3, 4, 5     (n-3) comparisons => 2
+max = 2:-   1, 2, 3, 4, 5     (n-4) comparisons => 1
+                                                => 0
+
+Time complexity:-
+        = 0 + 1 + 2 + ... + (n-1)
+        = ((n-1) * (n))/2
+        = (n (n-1))/2
+        = (n*n - n)/2
+
+        In time complexity less dominating terms are removed and constants removed.
+    => Time complexity for selection sort :- O(n*n)
+worst case = O(n*n)
+Best Case = O(n*n)
+
+Its is not stable algorithm.
+It perform well on small list or arrays.
+
+--------------------------------------------------------------
+Selection Sort
+
+for(int k = 0; k < n; k++){
+    int max = 0;
+    for(int i = 0; i < n - k; i++){
+        if(array[max] < array[i]){
+            max = i;
+        }
+    }
+    int temp = array[n - 1 - k];
+    array[n - 1 - k] = array[max];
+    array[max] = temp;
+}
