@@ -1,0 +1,44 @@
+Cyclic Sort:-
+
+Array = 3 5 2 1 4
+
+Its just use one for loop so, it sort in N comparison.
+-----------------------------------------------------------------------------
+Important ::- When given numbers from range 1 to N  use cyclic sort.
+-----------------------------------------------------------------------------
+
+Index =         0 1 2 3 4 
+Array =         3 5 2 1 4  (N = 5)
+sorted Array =  1 2 3 4 5
+
+You can see that in sorted array value at an index is index + 1 or index for value is inex - 1.
+
+index = value - 1.
+
+// Cyclic Sort
+for(int i = 0; i < n;){
+    int correct_index = array[i] - 1;
+    if(correct_index == i){
+        i++;
+    }else{
+        int temp = array[correct_index];
+        array[correct_index] = array[i];
+        array[i] = temp;
+    }
+}
+
+Array:   3 5 2 1 4
+---->>   2 5 3 1 4
+---->>   5 2 3 1 4
+---->>   4 2 3 1 5
+---->>   1 2 3 4 5
+
+In worst case it make N - 1 swaps, then N checks. => N - 1 + N = (2N - 1)
+
+Time complexity => Worst case: O(N)  ::Ignore constants in time complexity
+
+
+
+
+
+
